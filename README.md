@@ -1,5 +1,5 @@
 # Portfolio repo still in progress
- ### [URL set to](http://www.timquattrochi.com)
+ ### [URL set to timquattrochi.com](http://www.timquattrochi.com)
 
 
 
