@@ -22,7 +22,7 @@ function Footer() {
           target="_blank"
           rel="noreferrer"
           className="text-xl m-1 p-1 sm:m-2 sm:p-2 text-blue hover:bg-gray rounded-full hover:text-white transition-colors duration-300"
-          href="https://github.com/Tim-Quattrochi"
+          href="https://twitter.com/tjq9"
         >
           <FaTwitter />
           <span className="sr-only">Github</span>
