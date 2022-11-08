@@ -2,7 +2,6 @@ import {
   FaGithub,
   FaTwitter,
   FaLinkedinIn,
-  FaLink,
   FaEnvelope,
 } from 'react-icons/fa';
 
@@ -14,7 +13,7 @@ function Footer() {
           href="https://github.com/Tim-Quattrochi"
           target="_blank"
           rel="noreferrer"
-          className="text-xl m-1 p-1 sm:m-2 sm:p-2 text-gray-800 hover:bg-gray-800 rounded-full hover:text-yellow transition-colors duration-300"
+          className="text-xl m-1 p-1 sm:m-2 sm:p-2 text-gray hover:bg-gray rounded-full hover:text-yellow transition-colors duration-300"
         >
           <FaGithub />
           <span className="sr-only">Github</span>

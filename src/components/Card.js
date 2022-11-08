@@ -1,11 +1,9 @@
 import React from 'react';
 import profilePic from '../assets/profilePic.png';
-import { Link } from 'react-router-dom';
 import {
   FaGithub,
   FaTwitter,
   FaLinkedinIn,
-  FaLink,
   FaEnvelope,
 } from 'react-icons/fa';
 
