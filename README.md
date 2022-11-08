@@ -1,3 +1,8 @@
+# Portfolio repo still in progress
+ ### [URL set to](http://www.timquattrochi.com)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
