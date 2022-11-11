@@ -1,4 +1,5 @@
-import { FaArrowRight } from 'react-icons/fa';
+import ScrollIntoView from 'react-scroll-into-view';
+import { FaArrowRight, FaArrowAltCircleUp } from 'react-icons/fa';
 
 function Contact() {
   return (
@@ -14,6 +15,12 @@ function Contact() {
           </div>
         </span>
       </a>
+      <ScrollIntoView selector="#card">
+        <div className="mx-auto p-20">
+          <FaArrowAltCircleUp className="animate-bounce mx-auto text-3xl text-blue" />
+          Back to top
+        </div>
+      </ScrollIntoView>
     </div>
   );
 }
