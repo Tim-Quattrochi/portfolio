@@ -15,7 +15,7 @@ function Contact() {
           </div>
         </span>
       </a>
-      <ScrollIntoView selector="#card">
+      <ScrollIntoView selector="#navigation">
         <div className="mx-auto p-20">
           <FaArrowAltCircleUp className="animate-bounce mx-auto text-3xl text-blue" />
           Back to top
