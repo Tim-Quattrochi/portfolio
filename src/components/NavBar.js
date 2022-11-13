@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import icon from '../assets/icons8-fire.gif';
 
 function NavBar() {
@@ -10,13 +11,13 @@ function NavBar() {
         id="navigation"
         className="flex items-center justify-between lg:justify-around border-b border-gray py-8 pb-0"
       >
-        <a href="/">
+        <Link to="/">
           <img
-            className="object-contain h-20 w-50"
+            className="object-contain h-20 w-50 pb-5"
             src={icon}
             alt="logo"
           />
-        </a>
+        </Link>
         <nav>
           <section className="mobile-menu flex lg:hidden">
             <div
@@ -49,15 +50,18 @@ function NavBar() {
                   <line x1="6" y1="6" x2="18" y2="18" />
                 </svg>
               </div>
-              <ul className="menu-link-mobile-open flex flex-col items-center justify-between min-h-[250px]">
+              <ul
+                className="menu-link-mobile-open flex flex-col items-center justify-between min-h-[250px]"
+                onClick={() => setIsNavOpen(false)}
+              >
                 <li className="border-b border-gray-400 my-8 uppercase">
-                  <a href="/about">About</a>
+                  <Link to="/projects">Projects</Link>
                 </li>
                 <li className="border-b border-gray-400 my-8 uppercase">
-                  <a href="/portfolio">Portfolio</a>
+                  <Link to="/resume">Resume</Link>
                 </li>
                 <li className="border-b border-gray-400 my-8 uppercase">
-                  <a href="/contact">Contact</a>
+                  <Link to="/contact">Contact</Link>
                 </li>
               </ul>
             </div>
@@ -65,10 +69,10 @@ function NavBar() {
 
           <ul className="desktop-menu-hidden hidden space-x-8 lg:flex">
             <li>
-              <a href="/about">Projects</a>
+              <a href="/projects">Projects</a>
             </li>
             <li>
-              <a href="/about">Resume</a>
+              <Link to="/resume">Resume</Link>
             </li>
             <li>
               <a href="/contact">Contact</a>
