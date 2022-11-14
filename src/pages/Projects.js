@@ -1,77 +1,93 @@
 import React from 'react';
 import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
-import { FaReact, FaNodeJs, FaHtml5 } from 'react-icons/fa';
-import { SiMongodb, SiExpress, SiCss3 } from 'react-icons/si';
+import studyBoard from '../assets/studyBoard.png';
+import chi from '../assets/chi.png';
 
 function Projects() {
   return (
     <>
       <NavBar />
-      <div
-        className="max-w-3xl mx-auto justify-center py-12"
-        id="tech"
-      >
-        <p className="text-2xl text-black text-center sm:text-4xl pt-4 font-bold">
-          Under construction 🚧
+      <figure className="flex-col pt-3 max-w-lg  mx-auto">
+        <img
+          className="max-w-full shadow sh-auto rounded-lg"
+          src={studyBoard}
+          alt="study board project"
+        />
+        <p className="font-bold text-center text-sm">
+          Tech used: HTML, CSS, JavaScript
         </p>
-        <div className="flex flex-wrap justify-center pt-2">
-          <div className="flex flex-col w-60 p-60 m-6 overflow-hidden bg-white shadow-2xl rounded-xl sm:w-52">
-            <FaReact
-              color="#22d3ee"
-              className="mx-auto text-2xl sm:text-4xl"
-            />
-            <p className="mt-6 text-xl sm:text-2xl font-semibold text-center">
-              React
-            </p>
-          </div>
-          <div className="flex flex-col w-40 p-10 m-6 overflow-hidden bg-white shadow-2xl rounded-xl sm:w-52">
-            <SiMongodb
-              color="green"
-              className="mx-auto text-2xl sm:text-4xl"
-            />
-            <p className="mt-6 text-xl sm:text-2xl font-semibold text-center">
-              MongoDB
-            </p>
-          </div>
-          <div className="flex flex-col w-40 p-10 m-6 overflow-hidden bg-white shadow-2xl rounded-xl sm:w-52">
-            <FaNodeJs
-              color="#4d7c0f"
-              className="mx-auto text-2xl sm:text-4xl"
-            />
-            <p className="mt-6 text-xl sm:text-2xl font-semibold text-center">
-              Node.js
-            </p>
-          </div>
-          <div className="flex flex-col w-40 p-10 m-6 overflow-hidden bg-white shadow-2xl rounded-xl sm:w-52">
-            <SiExpress
-              color="gray"
-              className="mx-auto text-2xl sm:text-4xl"
-            />
-            <p className="mt-6 text-xl sm:text-2xl font-semibold text-center">
-              Express
-            </p>
-          </div>
-          <div className="flex flex-col w-40 p-10 m-6 overflow-hidden bg-white shadow-2xl rounded-xl sm:w-52">
-            <FaHtml5
-              color="#ea580c"
-              className="mx-auto text-2xl sm:text-4xl"
-            />
-            <p className="mt-6 text-xl sm:text-2xl font-semibold text-center">
-              HTML 5
-            </p>
-          </div>
-          <div className="flex flex-col w-40 p-10 m-6 overflow-hidden bg-white shadow-2xl rounded-xl sm:w-52">
-            <SiCss3
-              color="#0284c7"
-              className="mx-auto text-2xl sm:text-4xl"
-            />
-            <p className="mt-6 text-xl sm:text-2xl font-semibold text-center">
-              CSS
-            </p>
-          </div>
-        </div>
-      </div>
+        <figcaption className="mt-2 text-sm text-justify ">
+          {' '}
+          We envisioned an "accountability" app for users to compare
+          their study statistics with other 100Dev peers. With the
+          help of the MVC architecture, we were able to create an
+          easily navigable environment. This led to more production
+          and less asking of where certain code was located. Passport
+          was used for user authentication with bcrypt as a password
+          "salter". When users log in and create an account, they're
+          presented with a "create" button that sends a post request
+          to the server, which is then routed to the DB where their
+          "time" statistic is created. We then use these values in the
+          leaderboard and divide the time to show hours, minutes, and
+          seconds respectively. The timer itself contains two
+          different functions. One is a constructor function that
+          records the user's time and updates MongoDB every time it is
+          stopped. The other function is a timer function that
+          displays the elapsed time to the user directly.{' '}
+          <a
+            className="underline text-blue hover:text-gray visited:text-purple"
+            href="https://github.com/Tim-Quattrochi/100devsleaderboard"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Link to Repo
+          </a>
+        </figcaption>
+        <img
+          className=" w-6/12 sm:w-4/12 px-4 mx-auto mt-5"
+          src={chi}
+          alt="chihuahua"
+        />
+        <p className="font-bold text-center text-sm ">
+          Tech used: HTML5, CSS3, , JavaScript, Fetch API
+        </p>{' '}
+        <p className="mt-2">
+          I made this simple application to learn about consuming
+          API's. I used{' '}
+          <a
+            className="span underline text-blue hover:text-gray visited:text-purple"
+            href="https://dog.ceo/dog-api/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Dog.ceo
+          </a>{' '}
+          as my API to fetch a random picture of a Chihuahua on every
+          click. I learned how to read API documentation. One of the
+          challenges I faced was the image sizes being served by the
+          API. Since the image sizes are random, I had to have a way
+          to handle each image so that they were not overly large on
+          mobile devices. The simplest way I decided to handle the
+          image sizes at the time were with media queries using plain
+          CSS.
+        </p>
+        <p className="pt-2">
+          This project was meant to be simple. Some features I would
+          add are some more user interactivity, a dog count, random
+          quotes.
+        </p>
+        {''}
+        <a
+          className="grid place-items-center underline text-blue hover:text-gray visited:text-purple"
+          href="https://ilovechis.netlify.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Link to live site
+        </a>
+      </figure>
+
       <Footer />
     </>
   );
