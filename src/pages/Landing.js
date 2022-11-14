@@ -1,12 +1,10 @@
 import { useEffect } from 'react';
-
 import About from '../components/About';
 import Card from '../components/Card';
 import Footer from '../components/Footer';
 import Skills from '../components/Skills';
 import Contact from '../components/Contact';
 import NavBar from '../components/NavBar';
-import Resume from '../pages/Resume';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 

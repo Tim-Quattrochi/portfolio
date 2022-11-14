@@ -5,11 +5,14 @@ function About() {
   return (
     <div className="max-w-4xl mt-20 mx-auto">
       <p className="text-2xl text-black md:text-4xl font-bold text-center">
-        Hey 🤙
+        Hey! 🤙
       </p>
-      <p className="text-base sm:text-xl text-center text-gray leading-relaxed mt-4">
-        I am a passionate Software Developer. I love coding. More text
-        will be written here soon.
+      <p className="flex items-center text-base sm:text-xl text-center text-gray leading-relaxed ml-0 mt-4">
+        I'm Tim. A Software Developer who loves full-stack
+        development. Some pick a side, but I love both! I love
+        planning, testing, deploying, and maintaining websites. I am
+        coding all the time! In my downtime, I like to walk my
+        dalmation.
       </p>
 
       <ScrollIntoView selector="#tech">

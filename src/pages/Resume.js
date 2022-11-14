@@ -1,4 +1,4 @@
-import draftResume from '../assets/draftResume.pdf';
+import draftResume from '../assets/resume.pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import NavBar from '../components/NavBar';
@@ -15,7 +15,7 @@ function resume() {
         className="flex justify-center items-center h-screen sm:object-contain"
         file={draftResume}
       >
-        <Page pageNumber={1} />
+        <Page scale={1.5} width={350} pageNumber={1} />
       </Document>
       <Footer />
     </>

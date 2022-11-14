@@ -1,9 +1,11 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Projects from './pages/Projects';
 import Resume from './pages/Resume';
 import Landing from './pages/Landing';
-import Aos from 'aos';
 import 'aos/dist/aos.css';
+import ContactForm from './pages/ContactForm';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   return (
@@ -12,6 +14,8 @@ const App = () => {
         <Route path="/" element={<Landing />} />
         <Route path="resume" element={<Resume />} />
         <Route path="projects" element={<Projects />} />
+
+        <Route path="contact" element={<ContactForm />} />
 
         <Route
           path="*"
@@ -25,6 +29,7 @@ const App = () => {
           }
         />
       </Routes>
+      <ToastContainer />
     </>
   );
 };

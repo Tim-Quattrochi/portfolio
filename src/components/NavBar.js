@@ -67,7 +67,7 @@ function NavBar() {
             </div>
           </section>
 
-          <ul className="desktop-menu-hidden hidden space-x-8 lg:flex">
+          <ul className="desktop-menu-hidden hidden space-x-8 lg:flex text-lg">
             <li>
               <a href="/projects">Projects</a>
             </li>
