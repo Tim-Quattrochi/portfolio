@@ -12,7 +12,7 @@ function About() {
         development. Some pick a side, but I love both! I love
         planning, testing, deploying, and maintaining websites. I am
         coding all the time! In my downtime, I like to walk my
-        dalmation.
+        dalmatian.
       </p>
 
       <ScrollIntoView selector="#tech">
