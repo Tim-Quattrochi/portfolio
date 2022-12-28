@@ -1,17 +1,17 @@
-import draftResume from '../assets/resume.pdf';
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
-import 'react-pdf/dist/esm/Page/TextLayer.css';
-import NavBar from '../components/NavBar';
-import Footer from '../components/Footer';
-import { MdCloudDownload } from 'react-icons/md';
+import draftResume from "../assets/resume.pdf";
+import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import "react-pdf/dist/esm/Page/TextLayer.css";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import { MdCloudDownload } from "react-icons/md";
 
-import { Document, Page, pdfjs } from 'react-pdf';
+import { Document, Page, pdfjs } from "react-pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const options = {
-  cMapUrl: 'cmaps/',
+  cMapUrl: "cmaps/",
   cMapPacked: true,
-  standardFontDataUrl: 'standard_fonts/',
+  standardFontDataUrl: "standard_fonts/",
 };
 const buttonStyling = `flex space-x-3 mr-2 font-semibold bg-gradient-to-r from-slate via-slate to-slate
   text-green rounded-md ring-2 ring-slate px-10 py-2 
@@ -28,6 +28,7 @@ function resume() {
           options={options}
         >
           <Page size="A4" height={600} pageIndex={0} />
+          <Page size="A4" height={600} pageIndex={1} />
         </Document>
       </div>
       <div className="py-5 border-t-3/2">
