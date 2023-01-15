@@ -1,6 +1,6 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import icon from '../assets/icons8-fire.gif';
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import icon from "../assets/icons8-fire.gif";
 
 function NavBar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -30,9 +30,9 @@ function NavBar() {
             </div>
 
             <div
-              className={isNavOpen ? 'showMenuNav' : 'hideMenuNav'}
+              className={isNavOpen ? "showMenuNav" : "hideMenuNav"}
             >
-              {' '}
+              {" "}
               <div
                 className="x-icon absolute top-0 right-0 px-8 py-8"
                 onClick={() => setIsNavOpen(false)}
@@ -86,8 +86,8 @@ function NavBar() {
       .showMenuNav {
         display: block;
         position: absolute;
-        width: 100%;
-        height: 100vh;
+        width: 50%;
+        height: 50vh;
         top: 0;
         left: 0;
         background: white;
