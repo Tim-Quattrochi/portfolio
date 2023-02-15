@@ -1,8 +1,8 @@
-import { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
-import NavBar from '../components/NavBar';
-import Footer from '../components/Footer';
-import { toast } from 'react-toastify';
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import { toast } from "react-toastify";
 
 function ContactForm() {
   const form = useRef();
@@ -15,17 +15,17 @@ function ContactForm() {
 
     emailjs
       .sendForm(
-        'service_qr78vt8',
-        'template_o52ua0t',
+        "service_qr78vt8",
+        "template_o52ua0t",
         form.current,
         publicKey
       )
       .then(
         (result) => {
-          toast.success('Your email has been sent!');
+          toast.success("Your email has been sent!");
         },
         (error) => {
-          toast.error('Something went wrong..');
+          toast.error("Something went wrong..");
         }
       );
     e.target.reset();
@@ -33,6 +33,9 @@ function ContactForm() {
   return (
     <>
       <NavBar />
+      <p className="text-2xl text-black md:text-4xl font-bold text-center">
+        Contact me
+      </p>
       <form
         ref={form}
         onSubmit={sendEmail}

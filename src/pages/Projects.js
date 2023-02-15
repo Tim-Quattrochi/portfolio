@@ -2,10 +2,7 @@ import ProjectCard from "../components/ProjectCard";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import studyBoard from "../assets/studyBoard.png";
-import chi from "../assets/chi.png";
-import tpd from "../assets/tpd.png";
 import tpd2 from "../assets/tpd2.png";
-import tpd3 from "../assets/tpd3.png";
 import guestBook from "../assets/guestBook.png";
 
 const projects = [
@@ -58,6 +55,7 @@ const projects = [
 function Projects() {
   return (
     <div className="p-4">
+      <NavBar />
       <h1 className="text-3xl text-center font-medium text-gray-900 mb-4">
         My Projects
       </h1>
@@ -71,6 +69,7 @@ function Projects() {
           />
         ))}
       </div>
+      <Footer />
     </div>
   );
 }
