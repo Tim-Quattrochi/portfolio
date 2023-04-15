@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar";
 import studyBoard from "../assets/studyBoard.png";
 import tpd2 from "../assets/tpd2.png";
 import guestBook from "../assets/guestBook.png";
+import upfront from "../assets/upfront.png";
 
 const projects = [
   {
@@ -23,6 +24,20 @@ const projects = [
     I deployed this site to an AWS EC2 instance, The backend uses the Express framework and I am routing all traffic to HTTPS for extra protection`,
     liveLink: "https://www.jerrykrikava.com",
     gitHubLink: "https://github.com/Tim-Quattrochi/Remembrance-Page",
+  },
+
+  {
+    name: "Upfront Local Insights",
+    image: upfront,
+    description: `Upfront Local Insights is a dynamic business review website that allows users to rate and review local businesses in their area. Built using the MERN stack, Vite, and leveraging the power of Tailwind CSS and DaisyUI, this site is a fast and responsive platform that provides users with a seamless experience.
+
+One of the key features of Upfront Local Insights is the ability for users to submit new businesses to the platform, complete with a photo to help others identify the business in question. The review system is designed to be feature-rich, allowing users to upload an image with their reviews and ratings, which creates an engaging and interactive experience for all.
+
+In addition to the core features, the site also includes pagination that allows users to easily navigate business listings and reduce load times for a better user experience.
+`,
+    liveLink: "http://54.90.137.205/",
+    gitHubLink:
+      "https://github.com/Tim-Quattrochi/Upfront-Local-Insights",
   },
 
   {
