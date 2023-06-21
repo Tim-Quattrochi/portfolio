@@ -1,12 +1,14 @@
-import { useEffect } from 'react';
-import About from '../components/About';
-import Card from '../components/Card';
-import Footer from '../components/Footer';
-import Skills from '../components/Skills';
-import Contact from '../components/Contact';
-import NavBar from '../components/NavBar';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
+import { useEffect } from "react";
+import About from "../components/About";
+import Card from "../components/Card";
+import Footer from "../components/Footer";
+import Skills from "../components/Skills";
+import Contact from "../components/Contact";
+import NavBar from "../components/NavBar/NavBar";
+import { projects } from "../utils/projects";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import Projects from "./Projects";
 
 const Landing = () => {
   useEffect(() => {
@@ -31,7 +33,7 @@ const Landing = () => {
         </div>
 
         <Skills />
-        <Contact />
+        <Projects products={projects} />
         <Footer />
       </div>
     </>

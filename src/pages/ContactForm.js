@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBar/NavBar";
 import Footer from "../components/Footer";
 import { toast } from "react-toastify";
 
@@ -9,7 +9,6 @@ function ContactForm() {
 
   const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 
-  console.log(form);
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -31,9 +30,9 @@ function ContactForm() {
     e.target.reset();
   };
   return (
-    <>
+    <div className="min-h-screen">
       <NavBar />
-      <p className="text-2xl text-black md:text-4xl font-bold text-center">
+      <p className="text-2xl text-yellow mt-2 md:text-4xl font-bold text-center">
         Contact me
       </p>
       <form
@@ -45,7 +44,7 @@ function ContactForm() {
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-white text-xs font-bold mb-2"
               htmlFor="grid-first-name"
             >
               First Name
@@ -59,7 +58,7 @@ function ContactForm() {
           </div>
           <div className="w-full md:w-1/2 px-3">
             <label
-              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              className="block uppercase tracking-wide text-white text-xs font-bold mb-2"
               htmlFor="grid-last-name"
             >
               Last Name
@@ -76,7 +75,7 @@ function ContactForm() {
           <div className="w-full px-3">
             <label
               className="block uppercase tracking-wide text-white text-xs font-bold mb-2"
-              htmlFor="grid-password"
+              htmlFor="email"
             >
               E-mail
             </label>
@@ -93,8 +92,8 @@ function ContactForm() {
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full px-3">
             <label
-              className="block uppercase tracking-wide text-xs font-bold mb-2"
-              htmlFor="grid-password"
+              className="block uppercase text-white tracking-wide text-xs font-bold mb-2"
+              htmlFor="message"
             >
               Message
             </label>
@@ -103,7 +102,7 @@ function ContactForm() {
               id="message"
               name="message"
             ></textarea>
-            <p className="text-gray-600 text-xs italic"></p>
+            <p className="text-gray text-xs italic"></p>
           </div>
         </div>
         <div className="md:flex md:items-center">
@@ -120,7 +119,7 @@ function ContactForm() {
         </div>
       </form>
       <Footer />
-    </>
+    </div>
   );
 }
 

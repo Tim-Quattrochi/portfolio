@@ -1,9 +1,10 @@
 import ReactGA from "react-ga";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
 import Landing from "./pages/Landing";
+import { projects } from "./utils/projects";
 import "aos/dist/aos.css";
 import ContactForm from "./pages/ContactForm";
 import { ToastContainer, toast } from "react-toastify";
@@ -13,13 +14,15 @@ const TRACKING_ID = "UA-257368782-1";
 ReactGA.initialize(TRACKING_ID);
 
 const App = () => {
+  const [theme, setTheme] = useState(null);
+
   useEffect(() => {
     ReactGA.pageview(
       window.location.pathname + window.location.search
     );
   }, []);
   return (
-    <>
+    <div className="bg-back-ground">
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="resume" element={<Resume />} />
@@ -40,7 +43,7 @@ const App = () => {
         />
       </Routes>
       <ToastContainer />
-    </>
+    </div>
   );
 };
 

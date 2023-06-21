@@ -4,14 +4,17 @@ import {
   FaLinkedinIn,
   FaEnvelope,
 } from "react-icons/fa";
-import Divider from "./Divider";
 import ScrollIntoView from "react-scroll-into-view";
+import { FaArrowAltCircleUp } from "react-icons/fa";
+import Divider from "./Divider";
 import { FaArrowRight } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 
 function Footer() {
   const location = useLocation();
 
+  const hideScrollUpBtn = location.pathname !== "/";
+  console.log(hideScrollUpBtn);
   return (
     <>
       <Divider text="Contact info" />
@@ -68,8 +71,15 @@ function Footer() {
           </span>
         </Link>
       )}
-
-      <div className="flex justify-center mt-4">
+      {/* hide the scroll up btn if the page is not the index */}
+      {!hideScrollUpBtn && (
+        <ScrollIntoView selector="#navigation">
+          <div className="float-right">
+            <FaArrowAltCircleUp className="animate-bounce mx-auto text-3xl text-blue" />
+          </div>
+        </ScrollIntoView>
+      )}
+      <div className="flex justify-center items-center mt-4">
         <p className="text-black mb-4">
           Made with{" "}
           <span className='mr-2 role="link" aria-label="heart" '>
