@@ -1,8 +1,4 @@
-import studyBoard from "../assets/studyBoard.png";
-import tpd2 from "../assets/tpd2.png";
-import guestBook from "../assets/guestBook.png";
-import upfront from "../assets/upfront.png";
-import nt from "../assets/n-t.png";
+import { nt, tpd2, upfront, guestBook, studyBoard } from "../assets";
 
 export const projects = [
   {
