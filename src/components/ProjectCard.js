@@ -1,40 +1,39 @@
-const ProjectCard = ({ name, image, description, link, link2 }) => {
+const ProjectCard = ({
+  name,
+  image,
+  description,
+  tech,
+  link,
+  link2,
+}) => {
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden m-4 max-w-sm">
+    <a
+      href={link}
+      target="_blank"
+      rel="noreferrer"
+      className="bg-[#000080] w-full md:w-1/2 dark:bg-slate-800 rounded-lg overflow-hidden"
+    >
       <img
-        className="w-full h-48 object-cover"
         src={image}
-        alt={name}
+        alt="work"
+        className="w-full  h-36 md:h-48 object-fit lg:object-cover"
       />
-      <div className="px-6 py-4">
-        <h2 className="text-lg font-medium text-gray-900">{name}</h2>
-        <p className="text-gray-700 whitespace-pre-line mt-2">
-          {description}
+      <div className="w-full  p-5 text-gray dark:text-gray ">
+        <h3 className="text-lg md:text-xl mb-2 md:mb-3 font-semibold">
+          {name}
+        </h3>
+        <p className="flex text-white flex-wrap gap-2 flex-row items-center justify-start text-xs md:text-sm ">
+          {tech.map((item, i) => (
+            <span
+              key={i}
+              className="inline-block px-2 py-1 bg-gray dark:bg-slate-900 rounded-md"
+            >
+              {item}
+            </span>
+          ))}
         </p>
       </div>
-      <div className="px-6 py-4 bg-gray-100">
-        <a
-          className="block w-full text-center font-medium text-blue-500 hover:text-blue-800"
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {link === null
-            ? "No live link yet ❌"
-            : "View live Project"}
-        </a>
-      </div>
-      <div className="px-6 py-4 bg-gray-100">
-        <a
-          className="block w-full text-center font-medium text-blue-500 hover:text-blue-800"
-          href={link2}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View Repository
-        </a>
-      </div>
-    </div>
+    </a>
   );
 };
 
