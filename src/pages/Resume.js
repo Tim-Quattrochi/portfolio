@@ -1,7 +1,7 @@
 import draftResume from "../assets/resume.pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
-import NavBar from "../components/NavBar";
+import NavBar from "../components/NavBar/NavBar";
 import Footer from "../components/Footer";
 import { MdCloudDownload } from "react-icons/md";
 
@@ -27,7 +27,12 @@ function resume() {
           file={draftResume}
           options={options}
         >
-          <Page size="A4" height={600} pageIndex={0} />
+          <Page
+            size="A4"
+            height={600}
+            pageIndex={0}
+            style={{ color: "blue" }}
+          />
           <Page size="A4" height={600} pageIndex={1} />
         </Document>
       </div>

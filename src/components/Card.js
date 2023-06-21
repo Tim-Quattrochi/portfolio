@@ -1,31 +1,32 @@
-import React from 'react';
-import profilePic from '../assets/profilePic.png';
+import React from "react";
+import { headshot } from "../assets";
 import {
   FaGithub,
   FaTwitter,
   FaLinkedinIn,
   FaEnvelope,
-} from 'react-icons/fa';
+} from "react-icons/fa";
+import { devTeam } from "../assets";
 
 function Card() {
   return (
-    <div className="w-full" id="card">
-      <div className="flex flex-col justify-center max-w-xs mx-auto bg-white shadow-xl rounded-xl p-5">
+    <div className="w-full " id="card">
+      <div className="flex flex-col  md:flex-row justify-center md:justify-start w-full md:w-1/2 lg:w-1/4 md:mt-10 mx-auto bg-gray bg-gradient-to-r from-back-ground to-yellow shadow-xl rounded-xl p-5">
         <div className="">
           <img
-            className="w-32 mx-auto shadow-xl rounded-full drop-shadow-lg"
-            src={profilePic}
-            alt=""
+            className="w-32 mx-auto shadow-xl  drop-shadow-lg"
+            src={headshot}
+            alt="Tim's portfolio headshot"
           />
           <div className="text-center mt-5">
-            <p className="text-xl sm:text-2xl text-gray-900">
+            <p className="text-xl sm:text-2xl text-blue">
               Tim Quattrochi
             </p>
-            <p className="text-xs sm:text-base text-gray pt-2 pb-4 px-5 w-auto inline-block border-b-2">
+            <p className="text-xs sm:text-base text-white pt-2 pb-4 px-5 w-auto inline-block ">
               Software Developer
             </p>
 
-            <div className="flex align-center justify-center mt-4">
+            <div className="flex align-center w-1/2 mx-auto md:w-full justify-center mt-4 mb-4 bg-back-ground">
               <a
                 href="https://github.com/Tim-Quattrochi"
                 target="_blank"
@@ -65,6 +66,11 @@ function Card() {
             </div>
           </div>
         </div>
+        <img
+          className="w-52 h-48 mx-auto md:ml-auto md:w-1/2 md:mt-20 lg:object-scale-down"
+          src={devTeam}
+          alt="team planning at a desk"
+        />
       </div>
     </div>
   );

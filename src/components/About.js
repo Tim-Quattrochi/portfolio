@@ -1,13 +1,13 @@
-import ScrollIntoView from 'react-scroll-into-view';
-import { FaChevronDown } from 'react-icons/fa';
+import ScrollIntoView from "react-scroll-into-view";
+import { FaChevronDown } from "react-icons/fa";
 
 function About() {
   return (
     <div className="max-w-4xl mt-20 mx-auto">
-      <p className="text-2xl text-black md:text-4xl font-bold text-center">
+      <p className="text-2xl text-white md:text-4xl font-bold text-center">
         Hey! 🤙
       </p>
-      <p className="flex items-center text-base sm:text-xl text-center text-gray leading-relaxed ml-0 mt-4">
+      <p className="flex items-center text-base sm:text-xl text-center text-white leading-relaxed ml-0 mt-4">
         I'm Tim. A Software Developer who loves full-stack
         development. Some pick a side, but I love both! I love
         planning, testing, deploying, and maintaining websites. I am

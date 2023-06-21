@@ -3,12 +3,22 @@ import {
   FaTwitter,
   FaLinkedinIn,
   FaEnvelope,
-} from 'react-icons/fa';
+} from "react-icons/fa";
+import ScrollIntoView from "react-scroll-into-view";
+import { FaArrowAltCircleUp } from "react-icons/fa";
+import Divider from "./Divider";
+import { FaArrowRight } from "react-icons/fa";
+import { Link, useLocation } from "react-router-dom";
 
 function Footer() {
+  const location = useLocation();
+
+  const hideScrollUpBtn = location.pathname !== "/";
+  console.log(hideScrollUpBtn);
   return (
-    <div className="py-5 border-t-3/2">
-      <div className="flex justify-center mt-4">
+    <>
+      <Divider text="Contact info" />
+      <div className="flex justify-center items-baseline mt-4">
         <a
           href="https://github.com/Tim-Quattrochi"
           target="_blank"
@@ -36,6 +46,7 @@ function Footer() {
           <FaLinkedinIn />
           <span className="sr-only">LinkedIn</span>
         </a>
+
         <a
           href="mailto:timq82@gmail.com"
           target="_blank"
@@ -46,13 +57,35 @@ function Footer() {
           <span className="sr-only">Email</span>
         </a>
       </div>
-      <div className="flex justify-center mt-4">
+      {location.pathname === "/contact" ? (
+        ""
+      ) : (
+        <Link to="/contact">
+          <span className="inline-block w-auto mx-auto bg-black font-display text-white text-base md:text-xl py-4 px-7 cursor-pointer">
+            <div className="flex flex-row items-center">
+              <span className="mr-3 animate-bounce">
+                Contact Form
+              </span>
+              <FaArrowRight color="blue" className="animate-bounce" />
+            </div>
+          </span>
+        </Link>
+      )}
+      {/* hide the scroll up btn if the page is not the index */}
+      {!hideScrollUpBtn && (
+        <ScrollIntoView selector="#navigation">
+          <div className="float-right">
+            <FaArrowAltCircleUp className="animate-bounce mx-auto text-3xl text-blue" />
+          </div>
+        </ScrollIntoView>
+      )}
+      <div className="flex justify-center items-center mt-4">
         <p className="text-black mb-4">
-          Made with{' '}
+          Made with{" "}
           <span className='mr-2 role="link" aria-label="heart" '>
             💙
           </span>
-          by{' '}
+          by{" "}
           <a
             className="text-blue hover:underline"
             href="mailto:timq82@gmail.com"
@@ -61,7 +94,7 @@ function Footer() {
           </a>
         </p>
       </div>
-    </div>
+    </>
   );
 }
 
