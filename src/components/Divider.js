@@ -8,10 +8,7 @@ const Divider = ({ text }) => {
         aria-hidden="true"
         role="presentation"
       ></span>
-      <span
-        id="projects"
-        className="flex-none block mx-4   px-4 py-2.5 text-xl leading-none font-medium uppercase bg-black text-yellow"
-      >
+      <span className="flex-none block mx-4   px-4 py-2.5 text-xl leading-none font-medium uppercase bg-black text-yellow">
         {text}
       </span>
       <span
