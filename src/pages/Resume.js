@@ -29,11 +29,12 @@ function resume() {
         >
           <Page
             size="A4"
-            height={600}
+            width={800}
+            height={1000}
             pageIndex={0}
             style={{ color: "blue" }}
           />
-          <Page size="A4" height={600} pageIndex={1} />
+          <Page size="A4" width={800} height={1000} pageIndex={1} />
         </Document>
       </div>
       <div className="py-5 border-t-3/2">
