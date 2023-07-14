@@ -20,7 +20,6 @@ const buttonStyling = `flex space-x-3 mr-2 font-semibold bg-gradient-to-r from-s
 function resume() {
   return (
     <>
-      <NavBar />
       <div className="sm:min-w-full max-w-xl flex flex-col align-center mx-auto ">
         <Document
           className="mx-auto"
@@ -51,7 +50,6 @@ function resume() {
           </a>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

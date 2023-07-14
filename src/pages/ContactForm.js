@@ -5,12 +5,15 @@ import Footer from "../components/Footer";
 import { toast } from "react-toastify";
 
 function ContactForm() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const form = useRef();
 
   const publicKey = process.env.REACT_APP_PUBLIC_KEY;
 
   const sendEmail = (e) => {
     e.preventDefault();
+
+    setIsSubmitting(true);
 
     emailjs
       .sendForm(
@@ -22,103 +25,72 @@ function ContactForm() {
       .then(
         (result) => {
           toast.success("Your email has been sent!");
+          form.current.reset();
         },
         (error) => {
           toast.error("Something went wrong..");
         }
-      );
-    e.target.reset();
+      )
+      .finally(() => setIsSubmitting(false));
   };
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen ">
       <NavBar />
-      <p className="text-2xl text-yellow mt-2 md:text-4xl font-bold text-center">
-        Contact me
-      </p>
-      <form
-        ref={form}
-        onSubmit={sendEmail}
-        id="contactForm"
-        className="w-full max-w-lg lg:mx-auto pt-20"
-      >
-        <div className="flex flex-wrap -mx-3 mb-6">
-          <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-            <label
-              className="block uppercase tracking-wide text-white text-xs font-bold mb-2"
-              htmlFor="grid-first-name"
-            >
-              First Name
-            </label>
+      <div className="max-w-md mx-auto py-12 mt-20 bg-gradient-to-r from-primary to-secondary">
+        <h2 className="text-2xl text-white font-bold text-center mb-6">
+          Contact Me
+        </h2>
+        <form ref={form} onSubmit={sendEmail}>
+          <div className="mb-6">
             <input
-              className="appearance-none block w-full border border-red rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white  focus:border-blue"
-              id="grid-first-name"
+              className="appearance-none block w-full bg-white text-text border border-gray-dark rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:shadow-outline"
               type="text"
               name="firstName"
-            />
-          </div>
-          <div className="w-full md:w-1/2 px-3">
-            <label
-              className="block uppercase tracking-wide text-white text-xs font-bold mb-2"
-              htmlFor="grid-last-name"
-            >
-              Last Name
-            </label>
-            <input
-              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white  focus:border-blue"
-              id="grid-last-name"
-              type="text"
-              name="lastName"
-            />
-          </div>
-        </div>
-        <div className="flex flex-wrap -mx-3 mb-6">
-          <div className="w-full px-3">
-            <label
-              className="block uppercase tracking-wide text-white text-xs font-bold mb-2"
-              htmlFor="email"
-            >
-              E-mail
-            </label>
-            <input
-              className="appearance-none block w-full  border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-blue"
-              id="email"
-              type="email"
-              name="email"
+              placeholder="First Name"
               required
             />
-            <p className="text-gray-600 text-xs italic"></p>
           </div>
-        </div>
-        <div className="flex flex-wrap -mx-3 mb-6">
-          <div className="w-full px-3">
-            <label
-              className="block uppercase text-white tracking-wide text-xs font-bold mb-2"
-              htmlFor="message"
-            >
-              Message
-            </label>
+          <div className="mb-6">
+            <input
+              className="appearance-none block w-full bg-white text-gray-700 border border-gray-dark rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+              type="text"
+              name="lastName"
+              placeholder="Last Name"
+              required
+            />
+          </div>
+          <div className="mb-6">
+            <input
+              className="appearance-none block w-full bg-white text-gray-700 border border-text-gray-dark rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div className="mb-6">
             <textarea
-              className=" no-resize appearance-none block w-full  border rounded py-3 px-4 mb-3 leading-tight focus:outline-none  h-48 resize-none  focus:border-blue"
-              id="message"
+              className="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:shadow-outline resize-none"
               name="message"
+              placeholder="Message"
+              rows="6"
+              required
             ></textarea>
-            <p className="text-gray text-xs italic"></p>
           </div>
-        </div>
-        <div className="md:flex md:items-center">
-          <div className="md:w-1/3 ">
+          <div className="flex justify-center">
             <button
-              className="shadow bg-blue hover:bg-gray focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded "
+              className="inline-block w-full px-4 py-3 mt-6 font-bold text-white bg-primary rounded hover:bg-secondary focus:outline-none focus:bg-blue-600"
               type="submit"
-              value="Send"
+              disabled={isSubmitting}
             >
-              Send
+              {isSubmitting ? "Sending..." : "Send"}
             </button>
           </div>
-          <div className="md:w-2/3"></div>
-        </div>
-      </form>
-      <Footer />
+        </form>
+      </div>
+      <div className="mt-48">
+        <Footer />
+      </div>
     </div>
   );
 }

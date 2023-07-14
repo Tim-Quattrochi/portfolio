@@ -1,0 +1,10 @@
+.card {
+  width: 370.348px;
+  height: 145.44px;
+  flex-shrink: 0;
+
+  border-radius: 15px 15px 0px 0px;
+  border: 1px solid #1e2d3d;
+  background: url("../../assets/webp/rectangle-42.webp"),
+    lightgray 0px -25.487px / 100% 143.299% no-repeat, #011221;
+}

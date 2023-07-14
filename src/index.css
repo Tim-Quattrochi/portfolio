@@ -3,6 +3,21 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Neue Machina';
-  src: url('../public/NeueMachina/NeueMachina-Regular.otf');
+  font-family: "Neue Machina";
+  src: url("../public/NeueMachina/NeueMachina-Regular.otf");
+}
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin-slow 5s linear infinite;
+  }
 }

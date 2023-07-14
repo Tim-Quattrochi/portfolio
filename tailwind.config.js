@@ -3,18 +3,16 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     colors: {
-      "back-ground": "#312E81",
-      blue: "#1fb6ff",
-      purple: "#7e5bef",
-      pink: "#ff49db",
-      orange: "#ff7849",
-      green: "#13ce66",
-      yellow: "#ffc82c",
-      "gray-dark": "#273444",
-      gray: "#8492a6",
-      "gray-light": "#d3dce6",
+      "back-ground": "#F7F7F7",
+      primary: "#2274A5",
+      secondary: "#32936F",
+      accent: "#EF6C35",
+      text: "#333333",
       white: "#FFFFFF",
-      "yellow-500": "#EAB308",
+      twitter: "#1DA1F2",
+      linkedIn: "#0077B5",
+      "gray-light": "#d3dce6",
+      "text-gray-dark": "#273444",
     },
     extend: {
       fontFamily: {

@@ -1,4 +1,4 @@
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "../components/ProjectCard/ProjectCard.js";
 import { projects } from "../utils/projects";
 import Divider from "../components/Divider";
 

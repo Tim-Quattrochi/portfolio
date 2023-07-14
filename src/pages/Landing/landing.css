@@ -1,0 +1,58 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  color: #e5e9f0;
+  margin-top: 10rem;
+  margin-left: 10rem;
+  font-size: 18px;
+  font-family: Fira Code;
+  font-weight: 450;
+}
+
+.name {
+  color: #e5e9f0;
+  font-size: 62px;
+  font-family: Fira Code;
+}
+
+.profession {
+  color: #4d5bce;
+  font-size: 32px;
+  font-family: Fira Code;
+  font-weight: 450;
+}
+
+.blur-bottom {
+  position: fixed;
+  bottom: 25%;
+  right: 5%;
+  width: 300px;
+  height: 300px;
+  border-radius: 0% 0% 50% 50%;
+  rotate: 10deg;
+  filter: blur(70px);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(77, 91, 206, 1),
+    rgba(76, 0, 255, 0)
+  );
+  opacity: 0.5;
+  z-index: 10;
+}
+
+.blur-top {
+  position: absolute;
+  top: 20%;
+  right: 30%;
+  width: 300px;
+  height: 300px;
+  border-radius: 0% 50% 0% 50%;
+  filter: blur(70px);
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(67, 217, 173, 1),
+    rgba(76, 0, 255, 0)
+  );
+  opacity: 0.5;
+  z-index: 10;
+}
