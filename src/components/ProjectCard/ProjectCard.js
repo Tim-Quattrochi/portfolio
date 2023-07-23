@@ -31,10 +31,10 @@ const ProjectCard = ({
       />
       {hovered && (
         <div className="absolute inset-0 bg-back-ground text-text flex flex-col justify-center items-center p-5 bg-opacity-90 transition-opacity duration-300">
-          <h3 className="text-lg md:text-xl mb-2 md:mb-3 font-semibold text-center">
+          <h3 className="text-md md:text-xl mb-1 md:mb-3 font-semibold text-center">
             {name}
           </h3>
-          <p className="text-xs mb-2 text-center font-bold text-secondary">
+          <p className="text-xs mb-2 text-center font-bold text-secondary leading-none">
             {description}
           </p>
 
