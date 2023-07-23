@@ -13,7 +13,7 @@ function Footer() {
   const location = useLocation();
 
   const hideScrollUpBtn = location.pathname !== "/";
-  console.log(hideScrollUpBtn);
+
   return (
     <>
       <div className="w-full bg-primary ">
