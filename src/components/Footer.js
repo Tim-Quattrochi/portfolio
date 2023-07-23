@@ -6,9 +6,8 @@ import {
 } from "react-icons/fa";
 import ScrollIntoView from "react-scroll-into-view";
 import { FaArrowAltCircleUp } from "react-icons/fa";
-import Divider from "./Divider";
-import { FaArrowRight } from "react-icons/fa";
-import { Link, useLocation } from "react-router-dom";
+
+import { useLocation } from "react-router-dom";
 
 function Footer() {
   const location = useLocation();
@@ -17,8 +16,8 @@ function Footer() {
   console.log(hideScrollUpBtn);
   return (
     <>
-      <div className=" bg-primary">
-        <div className="flex justify-center w-half items-baseline mt-4">
+      <div className="w-full bg-primary ">
+        <div className="flex justify-center  items-baseline  md:mt-30">
           <a
             href="https://github.com/Tim-Quattrochi"
             target="_blank"
@@ -65,7 +64,7 @@ function Footer() {
             </div>
           </ScrollIntoView>
         )}
-        <div className="flex justify-center items-center mt-4">
+        <div className="flex justify-center items-center md:mt-4">
           <p className="text-text mb-4">
             Made with{" "}
             <span className='mr-2 role="link" aria-label="heart" '>

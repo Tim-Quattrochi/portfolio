@@ -20,7 +20,7 @@ const ProjectCard = ({
 
   return (
     <div
-      className="relative rounded-lg overflow-hidden h-80"
+      className="relative rounded-lg overflow-hidden h-full"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -62,8 +62,8 @@ const ProjectCard = ({
           </div>
         </div>
       )}
-      <div className="bg-primary p-5 text-gray">
-        <h3 className="text-sm md:text-xl mb-2 md:mb-3 font-semibold">
+      <div className="bg-primary p-5 text-text-gray-dark">
+        <h3 className="text-sm md:text-lg w-auto  mb-2 md:mb-3 font-semibold bg-gradient-to-l from-primary to-secondary text-white">
           {name}
         </h3>
         <p className="flex text-gray-dark flex-wrap gap-2 flex-row items-center justify-start text-xs md:text-sm">

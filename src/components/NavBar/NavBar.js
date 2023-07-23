@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import icon from "../../assets/icons8-fire.gif";
 import "./navbar.css";
 
 function NavBar() {
@@ -13,18 +12,18 @@ function NavBar() {
     <>
       <div
         id="navigation"
-        className="flex items-center bg-primary w-full justify-between lg:justify-around border-b shadow-md py-8 pb-0"
+        className="font-neueMachina flex items-center bg-primary w-full justify-between lg:justify-around border-b shadow-md py-8 pb-0  "
       >
         <Link to="/">
-          <span className="text-text text-xl shadow-xl">
+          <span className="text-white text-lg bg-gradient-to-r from-twitter to-linkedIn hover:bg-gradient-to-l p-4 rounded-lg">
             Tim Quattrochi{" "}
             <span className="text-accent">407-486-9261</span>
           </span>
         </Link>
         <nav>
-          <section className="mobile-menu flex lg:hidden">
+          <section className="mobile-menu flex lg:hidden ">
             <button
-              className="flex flex-col h-12 w-12 border-2 rounded justify-center items-center group"
+              className="flex flex-col h-12 w-12 border-1 rounded justify-center items-center group"
               onClick={() => setIsNavOpen((prev) => !prev)}
             >
               <div
@@ -62,39 +61,46 @@ function NavBar() {
                 className="menu-link-mobile-open flex flex-col items-center justify-between "
                 onClick={() => setIsNavOpen(false)}
               >
-                <li className="text-primary hover:text-secondary my-8 uppercase">
+                <li className="text-text-gray-dark rounded  p-1  hover:text-secondary my-4 uppercase">
                   <a href="#projects">
                     {location.pathname === "/contact"
-                      ? ""
+                      ? null
                       : "Projects"}
                   </a>
                 </li>
-                <li className="text-primary hover:border-b border-back-ground my-8 uppercase">
+                {location.pathname !== "/" && (
+                  <li className=" text-text-gray-dark rounded  p-1  hover:text-secondary my-4 uppercase">
+                    <Link to="/">Home</Link>
+                  </li>
+                )}
+                <li className="text-text-gray-dark rounded  p-1  hover:text-secondary my-4 uppercase">
                   <Link to="/resume">Resume</Link>
                 </li>
-                <li className="text-primary hover:border-b border-back-ground my-8 uppercase">
+                <li className="text-text-gray-dark rounded  p-1  hover:text-secondary my-4 uppercase">
                   <Link to="/contact">Contact</Link>
                 </li>
               </ul>
             </div>
           </section>
 
-          <ul className="desktop-menu-hidden hidden space-x-8 lg:flex text-lg">
+          <ul className=" divide-gray-light desktop-menu-hidden hidden  space-x-3 lg:flex text-lg bg-gradient-to-l from-twitter to-linkedIn hover:bg-gradient-to-r opacity-80 rounded-lg p-1 m-1">
             {location.pathname === "/" ? (
-              <li className="text-white hover:text-secondary my-8 uppercase">
+              <li className="bg-text-gray-dark rounded p-1 text-white hover:text-secondary my-8 uppercase">
                 <a href="#projects">Projects</a>
               </li>
-            ) : (
-              ""
-            )}
+            ) : null}
 
-            <li className="text-white hover:text-secondary my-8 uppercase">
-              <Link to="/resume">Resume</Link>
-            </li>
+            {location.pathname !== "/" && (
+              <li className=" bg-text-gray-dark rounded p-1 text-white hover:text-secondary my-8 uppercase">
+                <Link to="/">Home</Link>
+              </li>
+            )}
             {location.pathname === "/contact" ? (
-              ""
+              <li className=" bg-text-gray-dark rounded p-1 text-white hover:text-secondary my-8 uppercase">
+                <Link to="/resume">Resume</Link>
+              </li>
             ) : (
-              <li className="text-white hover:text-secondary my-8 uppercase">
+              <li className=" bg-text-gray-dark rounded p-1 text-white hover:text-secondary my-8 uppercase">
                 <a href="/contact">Contact</a>
               </li>
             )}

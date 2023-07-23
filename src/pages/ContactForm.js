@@ -34,13 +34,13 @@ function ContactForm() {
       .finally(() => setIsSubmitting(false));
   };
   return (
-    <div className="min-h-screen ">
+    <div className="font-neueMachina min-h-screen  ">
       <NavBar />
-      <div className="max-w-md mx-auto py-12 mt-20 bg-gradient-to-r from-primary to-secondary">
-        <h2 className="text-2xl text-white font-bold text-center mb-6">
+      <div className="max-w-sm md:max-w-md mx-auto py-12 my-20 bg-gradient-to-r from-primary to-secondary rounded-2xl">
+        <h2 className="text-2xl text-white font-bold text-center mb-2">
           Contact Me
         </h2>
-        <form ref={form} onSubmit={sendEmail}>
+        <form ref={form} onSubmit={sendEmail} className="p-5">
           <div className="mb-6">
             <input
               className="appearance-none block w-full bg-white text-text border border-gray-dark rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:shadow-outline"
@@ -88,9 +88,8 @@ function ContactForm() {
           </div>
         </form>
       </div>
-      <div className="mt-48">
-        <Footer />
-      </div>
+
+      <Footer />
     </div>
   );
 }
