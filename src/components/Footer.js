@@ -60,7 +60,7 @@ function Footer() {
         {!hideScrollUpBtn && (
           <ScrollIntoView selector="#navigation">
             <div className="float-right">
-              <FaArrowAltCircleUp className="animate-bounce mx-auto mr-2 text-3xl text-twitter" />
+              <FaArrowAltCircleUp className="animate-bounce mx-auto mr-2 text-3xl text-accent" />
             </div>
           </ScrollIntoView>
         )}
