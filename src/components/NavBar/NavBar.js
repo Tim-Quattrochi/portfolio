@@ -85,9 +85,14 @@ function NavBar() {
 
           <ul className=" divide-gray-light desktop-menu-hidden hidden  space-x-3 lg:flex text-lg bg-gradient-to-l from-twitter to-linkedIn hover:bg-gradient-to-r opacity-80 rounded-lg p-1 m-1">
             {location.pathname === "/" ? (
-              <li className="bg-text-gray-dark rounded p-1 text-white hover:text-secondary my-8 uppercase">
-                <a href="#projects">Projects</a>
-              </li>
+              <>
+                <li className="bg-text-gray-dark rounded p-1 text-white hover:text-secondary my-8 uppercase">
+                  <a href="#projects">Projects</a>
+                </li>
+                <li className="bg-text-gray-dark rounded p-1 text-white hover:text-secondary my-8 uppercase">
+                  <Link to="/resume">Resume</Link>
+                </li>
+              </>
             ) : null}
 
             {location.pathname !== "/" && (
