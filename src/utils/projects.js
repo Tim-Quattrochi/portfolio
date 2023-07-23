@@ -4,7 +4,7 @@ export const projects = [
   {
     name: "The N-T Collection",
     image: nt,
-    description: `The online store allows users to search for and purchase products, add items to their wishlist, and edit their profile information. Admins can add, edit, and delete products, as well as feature products on the main shop page. 
+    description: `The online store allows users to search for and purchase products, add items to their wishlists, and edit their profile information. Admins can add, edit, and delete products and feature products on the main shop page. 
           
        `,
     liveLink: "https://the-n-t-collection.vercel.app/",
@@ -13,41 +13,41 @@ export const projects = [
     tech: ["React", "Tailwind", "Node.js", "MongoDB", "Express.js"],
   },
   {
-    name: "Total Product Development",
+    name: "Total Product Dev",
     image: tpd2,
-    description: `I took a leadership role in developing and implementing CRUD features for project proposals and user information. This resulted in a user-friendly platform with robust project management capabilities. I was responsible for constructing backend controllers, routes, and models for a MongoDB database. Which ensured efficient data management and a seamless integration with the front-end.`,
+    description: `Total Product Development. I led the development and implementation of CRUD features for project proposals and user information. This resulted in a user-friendly platform with robust project management capabilities. I was responsible for constructing backend controllers, routes, and models for a MongoDB database, which ensured efficient data management and seamless integration with the front end.`,
     liveLink: "http://3.90.15.228/",
     gitHubLink: "https://github.com/Tim-Quattrochi/TPD",
-    tech: ["React", "Tailwind CSS", "Node.js", "MongoDB"],
+    tech: ["React", "Tailwind", "Node", "MongoDB", "Express"],
   },
   {
-    name: "Remembrance-Page",
+    name: "Remembrance Page",
     image: guestBook,
-    description: `This memorial web app includes user registration using JSON Web Tokens for secure authentication and authorization. The data storage and management were implemented using MongoDB with Mongoose schema to ensure data integrity. The interface was designed using Bootstrap, CSS and responsive web design principles to create an attractive and user-friendly experience.`,
+    description: `This web application serves as a memorial platform that allows users to register and access their accounts securely through JSON Web Tokens. The data storage and management system are facilitated by MongoDB, with Mongoose schema ensuring the accuracy and safety of all stored data. The user interface is designed using Bootstrap, CSS, and responsive web design principles, providing an engaging and easy-to-use experience.`,
     liveLink: "https://www.jerrykrikava.com",
     gitHubLink: "https://github.com/Tim-Quattrochi/Remembrance-Page",
-    tech: ["React", "Bootstrap", "Node.js", "MongoDB"],
+    tech: ["React", "Bootstrap", "Node", "MongoDB", "Express"],
   },
 
   {
-    name: "Upfront Local Insights",
+    name: "Local Insights",
     image: upfront,
-    description: `Created a robust business review website using the MERN stack, implementing best practices for clean code and architecture. Employed Tailwind CSS for a professional and responsive UI. Integrated a dynamic "submit a business" feature and a feature-rich review system with image uploads. Optimized user experience with pagination and designed an intuitive user profile page for review viewing.
+    description: `I developed a strong business review website using the MERN stack and adhered to best practices for clean code and architecture. I utilized Tailwind CSS to create a professional and responsive user interface. Additionally, I incorporated a dynamic feature that allows users to submit businesses and a feature-rich review system that allows for image uploads. To improve user experience, I implemented pagination and designed an easy-to-use user profile page for reviewing.
 `,
     liveLink: "http://54.90.137.205/",
     gitHubLink:
       "https://github.com/Tim-Quattrochi/Upfront-Local-Insights",
-    tech: ["React", "Tailwind", "Node.js", "MongoDB"],
+    tech: ["React", "Tailwind", "Node", "MongoDB", "Express"],
   },
 
   {
     name: "Study Board",
     image: studyBoard,
-    description: `an "accountability" app for users to compare their study statistics with other 100Dev peers. With the help of the MVC architecture, we were able to create an easily navigable environment. 
+    description: `We have developed an app that allows users to compare their study statistics with their peers on 100Devs. The app uses the MVC architecture to create a user-friendly and easily navigable environment. It promotes accountability among its users. 
    `,
     liveLink: null,
     gitHubLink:
       "https://github.com/Tim-Quattrochi/100devsleaderboard",
-    tech: ["EJS", "Node.js", "MongoDB"],
+    tech: ["EJS", "Node", "MongoDB", "Express"],
   },
 ];
