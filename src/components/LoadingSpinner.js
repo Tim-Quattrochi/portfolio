@@ -4,7 +4,7 @@ const LoadingSpinner = ({ width, text }) => {
   return (
     <>
       <div
-        className={`bg-white w-${width} h-full flex justify-center items-center`}
+        className={`bg-white w-${width} min-h-screen flex justify-center items-center`}
       >
         <div
           className={`flex  w-${width} h-64 items-center justify-center bg-white`}
@@ -13,7 +13,7 @@ const LoadingSpinner = ({ width, text }) => {
             <div className="h-9 w-9 rounded-full bg-text"></div>
           </div>
         </div>
-        <aside className="ml-5 text-twitter font-semibold">
+        <aside className="font-neueMachina ml-5 text-2xl text-twitter font-semibold">
           {text}
         </aside>
       </div>
