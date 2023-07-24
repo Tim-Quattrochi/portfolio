@@ -61,13 +61,18 @@ function NavBar() {
                 className="menu-link-mobile-open flex flex-col items-center justify-between "
                 onClick={() => setIsNavOpen(false)}
               >
+                {/* If the page the user is on is /contact or /resume, we want to hide the projects link 
+                because the projects link just navigates to the project id on the / main page, it doesn't
+                have any routing */}
                 <li className="text-text-gray-dark rounded  p-1  hover:text-secondary my-4 uppercase">
                   <a href="#projects">
-                    {location.pathname === "/contact"
+                    {location.pathname === "/contact" ||
+                    location.pathname === "/resume"
                       ? null
                       : "Projects"}
                   </a>
                 </li>
+                {/* don't show the Home link while on the home page */}
                 {location.pathname !== "/" && (
                   <li className=" text-text-gray-dark rounded  p-1  hover:text-secondary my-4 uppercase">
                     <Link to="/">Home</Link>
@@ -82,17 +87,13 @@ function NavBar() {
               </ul>
             </div>
           </section>
+          {/* end of mobile nav */}
 
           <ul className=" divide-gray-light desktop-menu-hidden hidden  space-x-3 lg:flex text-lg bg-gradient-to-l from-twitter to-linkedIn hover:bg-gradient-to-r opacity-80 rounded-lg p-1 m-1">
             {location.pathname === "/" ? (
-              <>
-                <li className="bg-text-gray-dark rounded p-1 text-white hover:text-secondary my-8 uppercase">
-                  <a href="#projects">Projects</a>
-                </li>
-                <li className="bg-text-gray-dark rounded p-1 text-white hover:text-secondary my-8 uppercase">
-                  <Link to="/resume">Resume</Link>
-                </li>
-              </>
+              <li className="bg-text-gray-dark rounded p-1 text-white hover:text-secondary my-8 uppercase">
+                <a href="#projects">Projects</a>
+              </li>
             ) : null}
 
             {location.pathname !== "/" && (
