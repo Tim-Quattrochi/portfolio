@@ -16,7 +16,7 @@ function Footer() {
 
   return (
     <>
-      <div className="w-full bg-primary ">
+      <div className="font-neueMachina w-full bg-primary ">
         <div className="flex justify-center  items-baseline  md:mt-30">
           <a
             href="https://github.com/Tim-Quattrochi"
