@@ -6,6 +6,17 @@ function NavBar() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const location = useLocation();
 
+  /**
+   *
+   * @param {string} currPath
+   * @param {Array} pathToCheck
+   * @param {string} pathToShow
+   * @returns
+   */
+  const checkLocPath = (currPath, pathToCheck, pathToShow) => {
+    return pathToCheck.includes(currPath) ? null : pathToShow;
+  };
+
   const hamburgerLine = `h-1 w-6 my-1 rounded-full bg-secondary transition ease transform duration-300`;
 
   return (
@@ -66,10 +77,11 @@ function NavBar() {
                 have any routing */}
                 <li className="text-text-gray-dark rounded  p-1  hover:text-secondary my-4 uppercase">
                   <a href="#projects">
-                    {location.pathname === "/contact" ||
-                    location.pathname === "/resume"
-                      ? null
-                      : "Projects"}
+                    {checkLocPath(
+                      location.pathname,
+                      ["/resume", "/contact"],
+                      "Projects"
+                    )}
                   </a>
                 </li>
                 {/* don't show the Home link while on the home page */}
