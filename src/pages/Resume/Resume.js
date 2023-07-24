@@ -126,7 +126,7 @@ function Resume() {
             <div className="flex gap-1">
               <button
                 type="button"
-                hidden={pageNumber == 1}
+                hidden={pageNumber === 1}
                 className={buttonStyling.prevBtn}
                 disabled={pageNumber <= 1}
                 onClick={previousPage}
