@@ -110,6 +110,9 @@ function NavBar() {
                 <a href="/contact">Contact</a>
               </li>
             )}
+            <li className=" bg-text-gray-dark rounded p-1 text-white hover:text-secondary my-8 uppercase">
+              <Link to="/resume">Resume</Link>
+            </li>
           </ul>
         </nav>
       </div>
