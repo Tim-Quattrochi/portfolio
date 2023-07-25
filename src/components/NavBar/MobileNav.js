@@ -54,15 +54,17 @@ const MobileNav = ({ location, renderLinkBasedOnPath }) => {
             "Projects"
           )}
 
-          {/* don't show the Home link while on the home page */}
           {renderLinkBasedOnPath(location.pathname, "/", "Home")}
-
-          <li className="bg-text-gray-dark rounded p-1 text-white hover:text-secondary my-8 uppercase">
-            <Link to="/resume">Resume</Link>
-          </li>
-          <li className="bg-text-gray-dark rounded p-1 text-white hover:text-secondary my-8 uppercase">
-            <Link to="/contact">Contact</Link>
-          </li>
+          {renderLinkBasedOnPath(
+            location.pathname,
+            "/resume",
+            "Resume"
+          )}
+          {renderLinkBasedOnPath(
+            location.pathname,
+            "/contact",
+            "Contact"
+          )}
         </ul>
       </div>
     </section>
