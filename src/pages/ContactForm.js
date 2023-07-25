@@ -88,8 +88,9 @@ function ContactForm() {
           </div>
         </form>
       </div>
-
-      <Footer />
+      <div className="mt-42 md:mt-48 ">
+        <Footer />
+      </div>
     </div>
   );
 }
