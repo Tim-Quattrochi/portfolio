@@ -1,23 +1,45 @@
-import { useState } from "react";
+import MobileNav from "./MobileNav";
 import { Link, useLocation } from "react-router-dom";
 import "./navbar.css";
 
 function NavBar() {
-  const [isNavOpen, setIsNavOpen] = useState(false);
   const location = useLocation();
 
   /**
    *
-   * @param {string} currPath
-   * @param {Array} pathToCheck
-   * @param {string} pathToShow
-   * @returns
+   * @param {string} currPath The current path of the page
+   * @param {string} pathToCheck The path to check for rendering the link
+   * @param {string} name The text to display as the link
+   * @returns  {JSX.Element | null}
    */
-  const checkLocPath = (currPath, pathToCheck, pathToShow) => {
-    return pathToCheck.includes(currPath) ? null : pathToShow;
-  };
 
-  const hamburgerLine = `h-1 w-6 my-1 rounded-full bg-secondary transition ease transform duration-300`;
+  const renderLinkBasedOnPath = (currPath, pathToCheck, name) => {
+    const liClass =
+      "bg-text-gray-dark rounded p-1 text-white hover:text-secondary my-8 uppercase";
+
+    //The project link needs to be an anchor tag because it is
+    //simply scrolling to the #projects id on the home page.
+    const linkToReturn = (
+      <li className={liClass}>
+        {pathToCheck.startsWith("#") ? (
+          <a href={pathToCheck}>{name}</a>
+        ) : (
+          <Link to={pathToCheck}>{name}</Link>
+        )}
+      </li>
+    );
+
+    if (currPath === "/" && pathToCheck === "/") {
+      return null;
+    } else if (
+      (currPath === "/resume" || currPath === "/contact") &&
+      pathToCheck === "#projects"
+    ) {
+      return null;
+    } else {
+      return linkToReturn;
+    }
+  };
 
   return (
     <>
@@ -32,99 +54,31 @@ function NavBar() {
           </span>
         </Link>
         <nav>
-          <section className="mobile-menu flex lg:hidden ">
-            <button
-              className="flex flex-col h-12 w-12 border-1 rounded justify-center items-center group"
-              onClick={() => setIsNavOpen((prev) => !prev)}
-            >
-              <div
-                className={`${hamburgerLine} ${
-                  isNavOpen
-                    ? "rotate-45 translate-y-3 opacity-50 group-hover:opacity-100"
-                    : "opacity-50 group-hover:opacity-100"
-                }`}
-              />
-              <div
-                className={`${hamburgerLine} ${
-                  isNavOpen
-                    ? "opacity-0"
-                    : "opacity-50 group-hover:opacity-100"
-                }`}
-              />
-              <div
-                className={`${hamburgerLine} ${
-                  isNavOpen
-                    ? "-rotate-45 -translate-y-3 opacity-50 group-hover:opacity-100"
-                    : "opacity-50 group-hover:opacity-100"
-                }`}
-              />
-            </button>
+          <MobileNav
+            location={location}
+            renderLinkBasedOnPath={renderLinkBasedOnPath}
+          />
 
-            <div
-              className={isNavOpen ? "showMenuNav" : "hideMenuNav"}
-            >
-              {" "}
-              <div
-                className="menu-link-mobile-open flex flex-col items-center justify-between "
-                onClick={() => setIsNavOpen(false)}
-              ></div>
-              <ul
-                className="menu-link-mobile-open flex flex-col items-center justify-between "
-                onClick={() => setIsNavOpen(false)}
-              >
-                {/* If the page the user is on is /contact or /resume, we want to hide the projects link 
-                because the projects link just navigates to the project id on the / main page, it doesn't
-                have any routing */}
-                <li className="text-text-gray-dark rounded  p-1  hover:text-secondary my-4 uppercase">
-                  <a href="#projects">
-                    {checkLocPath(
-                      location.pathname,
-                      ["/resume", "/contact"],
-                      "Projects"
-                    )}
-                  </a>
-                </li>
-                {/* don't show the Home link while on the home page */}
-                {location.pathname !== "/" && (
-                  <li className=" text-text-gray-dark rounded  p-1  hover:text-secondary my-4 uppercase">
-                    <Link to="/">Home</Link>
-                  </li>
-                )}
-                <li className="text-text-gray-dark rounded  p-1  hover:text-secondary my-4 uppercase">
-                  <Link to="/resume">Resume</Link>
-                </li>
-                <li className="text-text-gray-dark rounded  p-1  hover:text-secondary my-4 uppercase">
-                  <Link to="/contact">Contact</Link>
-                </li>
-              </ul>
-            </div>
-          </section>
-          {/* end of mobile nav */}
-
+          {/* Beginning of desktop nav */}
           <ul className=" divide-gray-light desktop-menu-hidden hidden  space-x-3 lg:flex text-lg bg-gradient-to-l from-twitter to-linkedIn hover:bg-gradient-to-r opacity-80 rounded-lg p-1 m-1">
-            {location.pathname === "/" ? (
-              <li className="bg-text-gray-dark rounded p-1 text-white hover:text-secondary my-8 uppercase">
-                <a href="#projects">Projects</a>
-              </li>
-            ) : null}
+            {renderLinkBasedOnPath(
+              location.pathname,
+              "#projects",
+              "Projects"
+            )}
 
-            {location.pathname !== "/" && (
-              <li className=" bg-text-gray-dark rounded p-1 text-white hover:text-secondary my-8 uppercase">
-                <Link to="/">Home</Link>
-              </li>
+            {renderLinkBasedOnPath(location.pathname, "/", "home")}
+
+            {renderLinkBasedOnPath(
+              location.pathname,
+              "/contact",
+              "Contact"
             )}
-            {location.pathname === "/contact" ? (
-              <li className=" bg-text-gray-dark rounded p-1 text-white hover:text-secondary my-8 uppercase">
-                <Link to="/resume">Resume</Link>
-              </li>
-            ) : (
-              <li className=" bg-text-gray-dark rounded p-1 text-white hover:text-secondary my-8 uppercase">
-                <a href="/contact">Contact</a>
-              </li>
+            {renderLinkBasedOnPath(
+              location.pathname,
+              "/resume",
+              "Resume"
             )}
-            <li className=" bg-text-gray-dark rounded p-1 text-white hover:text-secondary my-8 uppercase">
-              <Link to="/resume">Resume</Link>
-            </li>
           </ul>
         </nav>
       </div>
