@@ -6,7 +6,7 @@ function NavBar() {
   const location = useLocation();
 
   const liClass =
-    "bg-text-gray-dark rounded p-1 text-white hover:text-secondary my-8 uppercase";
+    "bg-text-gray-dark rounded p-1 text-white hover:text-secondary my-2 md:my-6 uppercase";
 
   /**
    *

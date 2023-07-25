@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Projects from "./pages/Projects";
 import Resume from "./pages/Resume/Resume";
-import Landing from "./pages/Landing";
+import Landing from "./pages/Landing/Landing";
 import NotFound from "./components/NotFound";
 import "aos/dist/aos.css";
 import ContactForm from "./pages/ContactForm";
