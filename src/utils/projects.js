@@ -1,4 +1,4 @@
-import { nt, tpd2, upfront, guestBook, studyBoard } from "../assets";
+import { nt, tpd2, upfront, guestBook, currentLook } from "../assets";
 
 export const projects = [
   {
@@ -10,7 +10,7 @@ export const projects = [
     liveLink: "https://the-n-t-collection.vercel.app/",
     gitHubLink:
       "https://github.com/Tim-Quattrochi/100devsleaderboard",
-    tech: ["React", "Tailwind", "Node.js", "MongoDB", "Express.js"],
+    tech: ["React", "Tailwind", "Node.js", "MongoDB", "Express"],
   },
   {
     name: "Total Product Dev",
@@ -41,13 +41,12 @@ export const projects = [
   },
 
   {
-    name: "Study Board",
-    image: studyBoard,
-    description: `We have developed an app that allows users to compare their study statistics with their peers on 100Devs. The app uses the MVC architecture to create a user-friendly and easily navigable environment. It promotes accountability among its users. 
+    name: "Blog Talk",
+    image: currentLook,
+    description: `This Blog app lets users register, create, read, edit, and delete blog posts. It also has a profile section. This App was deployed manually to an AWS EC2 instance using the Ubuntu command line and setting up a proxy pass with NGINX to forward requests to the backend server, and using pm2 to keep it running. 
    `,
-    liveLink: null,
-    gitHubLink:
-      "https://github.com/Tim-Quattrochi/100devsleaderboard",
-    tech: ["EJS", "Node", "MongoDB", "Express"],
+    liveLink: "http://3.89.98.155/",
+    gitHubLink: "https://github.com/Tim-Quattrochi/tims-blog",
+    tech: ["React", "Node", "MongoDB", "Express", "Bootstrap"],
   },
 ];
