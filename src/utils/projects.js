@@ -1,4 +1,4 @@
-import { nt, tpd2, upfront, guestBook, currentLook } from "../assets";
+import { nt, tpd2, upfront, guestBook, timBlog } from "../assets";
 
 export const projects = [
   {
@@ -42,7 +42,7 @@ export const projects = [
 
   {
     name: "Blog Talk",
-    image: currentLook,
+    image: timBlog,
     description: `This Blog app lets users register, create, read, edit, and delete blog posts. It also has a profile section. This App was deployed manually to an AWS EC2 instance using the Ubuntu command line and setting up a proxy pass with NGINX to forward requests to the backend server, and using pm2 to keep it running. 
    `,
     liveLink: "http://3.89.98.155/",
