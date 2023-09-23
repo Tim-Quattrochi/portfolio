@@ -6,6 +6,6 @@ export { default as About } from "./About";
 export { default as Skills } from "./Skills/Skills";
 export { default as ProjectCard } from "./ProjectCard/ProjectCard";
 export { default as Divider } from "./Divider";
-export { default as DarkmodeToggle } from "./DarkMode/DarkmodeToggle";
+export { default as DarkModeToggle } from "./DarkMode/DarkModeToggle";
 export { default as LoadingSpinner } from "./LoadingSpinner";
 export { default as NotFound } from "./NotFound";
