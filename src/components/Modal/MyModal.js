@@ -1,4 +1,9 @@
-import React, { useRef } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+} from "react";
 
 const MyModal = ({
   projects,
@@ -15,10 +20,52 @@ const MyModal = ({
       closeModal(e);
     }
   };
+
+  const handleTabKey = useCallback(
+    (e) => {
+      const focusableModalElements =
+        modalRef.current.querySelectorAll(
+          'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
+        );
+      const firstElement = focusableModalElements[0];
+      const lastElement =
+        focusableModalElements[focusableModalElements.length - 1];
+
+      if (!e.shiftKey && document.activeElement !== firstElement) {
+        firstElement.focus();
+        return e.preventDefault();
+      }
+      if (e.shiftKey && document.activeElement !== lastElement) {
+        lastElement.focus();
+        e.preventDefault();
+      }
+    },
+    [modalRef]
+  );
+
+  const keyListenersMap = useMemo(() => {
+    return new Map([
+      ["Escape", closeModal],
+      ["Tab", handleTabKey],
+    ]);
+  }, [closeModal, handleTabKey]);
+
+  useEffect(() => {
+    function keyListener(e) {
+      const listener = keyListenersMap.get(e.key);
+      return listener && listener(e);
+    }
+    window.addEventListener("keydown", keyListener);
+
+    return () => window.removeEventListener("keydown", keyListener);
+  }, [closeModal, keyListenersMap]);
+
   return (
     <div
       className="fixed inset-0 flex items-center justify-center z-50"
       onClick={handleClick}
+      role="dialog"
+      aria-modal="true"
     >
       <div
         className="bg-white dark:bg-dark-background p-6 rounded-lg shadow-lg"
