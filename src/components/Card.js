@@ -9,7 +9,7 @@ import {
 
 function Card() {
   return (
-    <div className="flex flex-col  justify-center  w-3/4  lg:w-1/4  mx-auto bg-white shadow-xl rounded-xl p-5">
+    <div className="flex flex-col  justify-center  w-3/4  lg:w-1/4  mx-auto bg-white dark:bg-dark-elevated-background shadow-xl rounded-xl p-5">
       <div className="flex flex-col items-center md:items-start md:flex-row md:flex-wrap md:justify-center md:space-x-4">
         <img
           className="w-32 h-40 md:w-40 md:h-52 mx-auto md:mx-0 shadow-xl rounded-lg"
@@ -17,14 +17,14 @@ function Card() {
           alt="Tim's portfolio headshot"
         />
         <div className="text-center mt-5 ">
-          <h2 className=" text-2xl md:text-4xl font-bold text-primary">
+          <h2 className=" text-2xl md:text-4xl font-bold text-primary dark:text-dark-elevated-text">
             Tim Quattrochi
           </h2>
-          <p className="text-base md:text-lg mx-auto text-text-gray-dark pt-2 pb- px-5 inline-block ">
+          <p className="text-base md:text-lg mx-auto text-text-gray-dark dark:text-dark-information pt-2 pb- px-5 inline-block ">
             Software Developer
           </p>
 
-          <div className="flex justify-center md:justify-start mt-4 mb-4">
+          <div className="flex justify-center md:justify-start mt-4 mb-4 lg:hidden">
             <a
               href="https://github.com/Tim-Quattrochi"
               target="_blank"
