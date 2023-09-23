@@ -7,14 +7,12 @@ function Projects() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const openModal = (e, index) => {
-    e.stopPropagation();
+  const openModal = (index) => {
     setCurrentIndex(index);
     setIsModalOpen((prev) => !prev);
   };
 
-  const closeModal = (e) => {
-    e.stopPropagation();
+  const closeModal = () => {
     setIsModalOpen((prev) => !prev);
     setCurrentIndex(0);
   };

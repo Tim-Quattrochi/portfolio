@@ -19,7 +19,7 @@ const ProjectCard = ({
   return (
     <div
       className="relative rounded-lg overflow-hidden h-full group"
-      onClick={(e) => openModal(e, currentIndex)}
+      onClick={() => openModal(currentIndex)}
     >
       <img
         src={image}

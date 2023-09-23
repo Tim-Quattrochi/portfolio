@@ -17,7 +17,7 @@ const MyModal = ({
   const handleClick = (e) => {
     e.stopPropagation();
     if (!modalRef.current.contains(e.target)) {
-      closeModal(e);
+      closeModal();
     }
   };
 
@@ -81,7 +81,7 @@ const MyModal = ({
         <img
           src={projects[currentIndex].image}
           alt="work"
-          className="w-half mx-auto h-48 md:h-64 object-cover transition-transform transform group-hover:scale-105"
+          className="w-full lg:w-6/12 lg:h-auto mx-auto h-64 lg:object-fill transition-transform transform group-hover:scale-105"
         />
 
         <div className="flex justify-between mt-4">
@@ -99,7 +99,7 @@ const MyModal = ({
           </button>
         </div>
         <button
-          onClick={(e) => closeModal(e)}
+          onClick={closeModal}
           className="text-white bg-red-500 px-4 py-2 rounded-md hover:bg-red-600 mt-4"
         >
           Close
