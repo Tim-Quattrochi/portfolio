@@ -6,11 +6,13 @@ import {
   Card,
   Divider,
   Skills,
+  SideContact,
 } from "../../components";
 import { projects } from "../../utils/projects";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Projects from "../Projects";
+import StarsCanvas from "../../components/Canvas/Stars";
 
 const Landing = () => {
   useEffect(() => {
@@ -22,8 +24,9 @@ const Landing = () => {
   return (
     <>
       <NavBar />
+      <SideContact />
 
-      <div className="font-neueMachina min-h-screen pb-0 py-10 px-3 sm:px-5 bg-[#F5F5F5]">
+      <div className="font-neueMachina min-h-screen pb-0 py-10 px-3 sm:px-5 bg-[#F5F5F5] dark:bg-dark-secondary-background">
         <div className="w-half bg-primary dark:bg-text-gray-dark py-10 rounded-lg">
           <div data-aos="fade-down" data-aos-duration="800">
             <Card />
@@ -49,12 +52,11 @@ const Landing = () => {
           <Skills />
         </div>
         <Divider text="Projects" />
-        <div
-          data-aos="zoom-out-right"
-          data-aos-duration="1200"
-          data-aos-delay="400"
-        >
-          <Projects products={projects} />
+
+        <Projects products={projects} />
+
+        <div className="relative h-56 w-full">
+          <StarsCanvas />
         </div>
         <Footer />
       </div>
