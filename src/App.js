@@ -7,15 +7,13 @@ import Landing from "./pages/Landing/Landing";
 import NotFound from "./components/NotFound";
 import "aos/dist/aos.css";
 import ContactForm from "./pages/ContactForm";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const TRACKING_ID = "UA-257368782-1";
 ReactGA.initialize(TRACKING_ID);
 
 const App = () => {
-  const [theme, setTheme] = useState(null);
-
   useEffect(() => {
     ReactGA.pageview(
       window.location.pathname + window.location.search
