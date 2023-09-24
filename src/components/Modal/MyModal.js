@@ -16,6 +16,7 @@ const MyModal = ({
 
   const handleClick = (e) => {
     e.stopPropagation();
+
     if (!modalRef.current.contains(e.target)) {
       closeModal();
     }
@@ -79,7 +80,11 @@ const MyModal = ({
         </p>
 
         <img
-          src={projects[currentIndex].image}
+          src={
+            projects[currentIndex].image instanceof Array
+              ? projects[currentIndex].image[1]
+              : projects[currentIndex].image
+          }
           alt="work"
           className="w-full lg:w-6/12 lg:h-auto mx-auto h-64 lg:object-fill transition-transform transform group-hover:scale-105"
         />
