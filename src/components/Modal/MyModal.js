@@ -72,10 +72,18 @@ const MyModal = ({
         className="bg-white dark:bg-dark-background p-6 rounded-lg shadow-lg"
         ref={modalRef}
       >
+        <span className="flex justify-end">
+          <button
+            onClick={closeModal}
+            className="text-white  bg-red-500 px-4 py-2 rounded-md hover:bg-red-600 mt-5"
+          >
+            Close
+          </button>
+        </span>
         <h2 className="text-2xl font-semibold mb-4 dark:text-dark-primary-text">
           {projects[currentIndex].name}
         </h2>
-        <p className="text-gray-dark mb-4 dark:text-dark-primary-text">
+        <p className="text-gray-dark mb-4 dark:text-dark-primary-text  indent-1 whitespace-pre-line lg:text-justify leading-relaxed line-clamp-6">
           {projects[currentIndex].description}
         </p>
 
@@ -86,7 +94,7 @@ const MyModal = ({
               : projects[currentIndex].image
           }
           alt="work"
-          className="w-full lg:w-6/12 lg:h-auto mx-auto h-64 lg:object-fill transition-transform transform group-hover:scale-105"
+          className="w-full mt-2 lg:w-6/12 lg:h-auto mx-auto h-64 lg:object-fill transition-transform transform group-hover:scale-105"
         />
 
         <div className="flex justify-between mt-4">
@@ -98,17 +106,11 @@ const MyModal = ({
           </button>
           <button
             onClick={nextProject}
-            className="text-white bg-blue-500 px-4 py-2 rounded-md hover:bg-blue-600"
+            className="text-white bg-emerald-500 px-4 py-2 rounded-md hover:bg-blue-600"
           >
             Next
           </button>
         </div>
-        <button
-          onClick={closeModal}
-          className="text-white bg-red-500 px-4 py-2 rounded-md hover:bg-red-600 mt-4"
-        >
-          Close
-        </button>
       </div>
     </div>
   );
