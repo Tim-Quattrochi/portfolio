@@ -1,6 +1,7 @@
 import MobileNav from "./MobileNav";
 import { renderLinkBasedOnPath } from "./helpers/helperNav";
 import { Link, useLocation } from "react-router-dom";
+import DarkModeToggle from "../DarkMode/DarkModeToggle";
 
 import "./navbar.css";
 
@@ -46,6 +47,10 @@ function NavBar() {
           )}
         </ul>
       </nav>
+      {/*hidden on mobile*/}
+      <span className="hidden md:block">
+        <DarkModeToggle />
+      </span>
     </div>
   );
 }
