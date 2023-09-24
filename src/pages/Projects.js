@@ -30,7 +30,7 @@ function Projects() {
     <div className="p-4" id="projects">
       <Divider text="Explore My Projects" forProjects={true} />
 
-      <div className="flex flex-row flex-wrap md:flex-nowrap gap-5 mt-8">
+      <div className="flex flex-row flex-wrap justify-center md:flex-nowrap gap-5 mt-8">
         {projects.map((project) => (
           <ProjectCard
             key={project.name}
