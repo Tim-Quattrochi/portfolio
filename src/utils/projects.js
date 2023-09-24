@@ -15,7 +15,7 @@ export const projects = [
        `,
     liveLink: "https://the-n-t-collection.vercel.app/",
     gitHubLink:
-      "https://github.com/Tim-Quattrochi/100devsleaderboard",
+      "https://github.com/NathanielGrandinette/The-N-T-Collection",
     tech: ["React", "Tailwind", "Node.js", "MongoDB", "Express"],
   },
   {
