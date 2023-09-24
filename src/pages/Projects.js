@@ -14,7 +14,6 @@ function Projects() {
 
   const closeModal = () => {
     setIsModalOpen((prev) => !prev);
-    setCurrentIndex(0);
   };
 
   const nextProject = () => {
