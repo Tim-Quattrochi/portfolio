@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Modal from "../Modal/MyModal";
 
 const ProjectCard = ({
@@ -16,17 +16,22 @@ const ProjectCard = ({
   previousProject,
   projects,
 }) => {
+  //when the user clicks on a project, the index is passed to openModal, which then sets the currentIndex to the index of the project that was clicked on.
+  const clickedIndex = projects.findIndex(
+    (proj) => proj.name === name
+  );
+
   return (
     <div
       className="relative rounded-lg overflow-hidden h-full group"
-      onClick={() => openModal(currentIndex)}
+      onClick={() => openModal(clickedIndex)}
     >
       <img
-        src={image}
+        src={image instanceof Array ? image[0] : image}
         alt="work"
-        className="w-full h-48 md:h-64 object-cover transition-transform transform group-hover:scale-105"
+        className="w-full h-48 md:h-64 object-cover transition-transform transform  group-hover:scale-105"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-primary to-secondary text-white opacity-0 transition-opacity duration-300 group-hover:opacity-90 flex flex-col justify-center items-center p-5  cursor-pointer">
+      <div className="absolute inset-0 bg-gradient-to-t from-primary to-secondary text-white opacity-0 transition-opacity duration-300  flex flex-col justify-center items-center p-5  cursor-pointer">
         <h3 className="text-md md:text-xl mb-1 md:mb-3 font-semibold text-center">
           {name}
         </h3>
