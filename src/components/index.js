@@ -11,3 +11,4 @@ export { default as LoadingSpinner } from "./LoadingSpinner";
 export { default as NotFound } from "./NotFound";
 export { default as SideContact } from "./SideContact/SideContact";
 export { default as Modal } from "./Modal/MyModal";
+export { default as AOS } from "./AnimateOnScroll/AOS";

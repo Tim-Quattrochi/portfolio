@@ -7,6 +7,7 @@ import {
   Divider,
   Skills,
   SideContact,
+  AOS,
 } from "../../components";
 import { projects } from "../../utils/projects";
 import Aos from "aos";
@@ -34,23 +35,17 @@ const Landing = () => {
         </div>
         <Divider text="About Me" />
 
-        <div className="max-w-4xl mt-20 mx-auto p-6 bg-primary rounded-lg shadow-lg">
-          <div
-            data-aos="fade-up"
-            data-aos-duration="800"
-            data-aos-delay="400"
-          >
+        <div className="max-w-4xl mt-20 mx-auto p-6 bg-primary rounded-lg shadow-lg dark:bg-dark-background">
+          <AOS direction="fade-up" duration="800" delay="400">
             <About />
-          </div>
+          </AOS>
         </div>
+
         <Divider text="Technology" />
-        <div
-          data-aos="flip-left"
-          data-aos-duration="800"
-          data-aos-delay="400"
-        >
+
+        <AOS direction="flip-left" duration="800" delay="400">
           <Skills />
-        </div>
+        </AOS>
         <Divider text="Projects" />
 
         <Projects products={projects} />
