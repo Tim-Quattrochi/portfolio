@@ -10,7 +10,7 @@ export const projects = [
   {
     name: "The N-T Collection",
     image: nt,
-    description: `The online store allows users to search for and purchase products, add items to their wishlists, and edit their profile information. Admins can add, edit, and delete products and feature products on the main shop page. 
+    description: `The online store allows users to search for and purchase products, add items to their wishlists, and edit their profile information. Admins can add, edit, and delete products and feature products on the main shop page. We implemented a feature where an admin can "feature" their product on the main page to be shown to the users upon entering the web site. This project demonstrates my ability to work on a team and collaborate effectively to achieve a common goal. 
           
        `,
     liveLink: "https://the-n-t-collection.vercel.app/",
@@ -21,7 +21,7 @@ export const projects = [
   {
     name: "Total Product Dev",
     image: [tpd2, tpdTracker],
-    description: `Total Product Development. I led the development and implementation of CRUD features for project proposals and user information. This resulted in a user-friendly platform with robust project management capabilities. I was responsible for constructing backend controllers, routes, and models for a MongoDB database, which ensured efficient data management and seamless integration with the front end.`,
+    description: `During the final project of my program at Southern New Hampshire University, I led a team of two other skilled developers. We set out to create a user-friendly platform with robust project management features by implementing CRUD functionalities for project proposals and user information. My role involved crafting the backbone of the application, including backend controllers, routes, and models. We seamlessly integrated our system with a MongoDB database, ensuring efficient data flow and a smooth user experience on the frontend. This project exemplifies my ability to lead and collaborate effectively in a team, driving successful outcomes in a dynamic development environment.`,
     liveLink: "http://3.90.15.228/",
     gitHubLink: "https://github.com/Tim-Quattrochi/TPD",
     tech: ["React", "Tailwind", "Node", "MongoDB", "Express"],
@@ -29,7 +29,7 @@ export const projects = [
   {
     name: "Remembrance Page",
     image: [guestBook, rememPage2],
-    description: `This web application serves as a memorial platform that allows users to register and access their accounts securely through JSON Web Tokens. The data storage and management system are facilitated by MongoDB, with Mongoose schema ensuring the accuracy and safety of all stored data. The user interface is designed using Bootstrap, CSS, and responsive web design principles, providing an engaging and easy-to-use experience.`,
+    description: `This web application serves as a memorial platform that allows users to register and access their accounts securely through a refresh and access token strategy. It also offers the user the ability to sign up with their Google Accounts using Google's Oauth. The data storage and management system are facilitated by MongoDB, with Mongoose schema ensuring the accuracy and safety of all stored data. The user interface is designed using Bootstrap, CSS, and responsive web design principles, providing an engaging and easy-to-use experience with custom graphics.`,
     liveLink: "https://www.jerrykrikava.com",
     gitHubLink: "https://github.com/Tim-Quattrochi/Remembrance-Page",
     tech: ["React", "Bootstrap", "Node", "MongoDB", "Express"],
