@@ -12,7 +12,7 @@ function Card() {
     <div className="flex flex-col  justify-center  w-3/4  lg:w-1/4  mx-auto bg-white dark:bg-dark-elevated-background shadow-xl rounded-xl p-5">
       <div className="flex flex-col items-center md:items-start md:flex-row md:flex-wrap md:justify-center md:space-x-4">
         <img
-          className="w-32 h-40 md:w-40 md:h-52 mx-auto md:mx-0 shadow-xl rounded-lg"
+          className="w-32 h-40 md:w-40 md:h-52 mx-auto md:mx-0 shadow-xl rounded-lg dark:brightness-75"
           src={headShot1}
           alt="Tim's portfolio headshot"
         />
