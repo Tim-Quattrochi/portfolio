@@ -19,7 +19,6 @@ const DarkModeToggle = () => {
         />
       ) : (
         <img
-          // style={{ borderRadius: "50px", cursor: "pointer" }}
           className="rounded-full cursor-pointer"
           width={40}
           src={sun}
