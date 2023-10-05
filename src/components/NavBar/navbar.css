@@ -10,7 +10,8 @@
   border-radius: 10px;
   right: 0;
   opacity: 0.9;
-  background: #d3dce6;
+  color: #333333;
+  background: #273444;
   z-index: 10;
   display: flex;
   flex-direction: column;
@@ -23,6 +24,11 @@
     0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.dark .showMenuNav {
+  background: #1e1e1e;
+  color: #cccccc;
 }
 
 @media screen and (max-width: 1023px) {

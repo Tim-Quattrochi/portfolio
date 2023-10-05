@@ -14,7 +14,7 @@ export const renderLinkBasedOnPath = (
   //The project link needs to be an anchor tag because it is
   //simply scrolling to the #projects id on the home page.
   const liClass =
-    "bg-text-gray-dark rounded p-1 text-white hover:text-secondary my-2 md:my-6 uppercase";
+    "p-1 text-white hover:text-secondary my-2 md:my-6 p-1";
 
   const linkToReturn = (
     <li className={liClass}>
